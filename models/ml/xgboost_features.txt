@@ -1,0 +1,10 @@
+measured_irradiance
+measured_temperature
+measured_voltage
+measured_current
+hour
+day
+day_of_year
+rolling_power
+rolling_temperature
+rolling_irradiance

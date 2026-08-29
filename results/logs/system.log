@@ -1,0 +1,651 @@
+2026-08-28 05:14:45,393 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:45,393 - smart_solar_iot - INFO - SMART SOLAR IOT MONITORING SYSTEM
+2026-08-28 05:14:45,393 - smart_solar_iot - INFO - Master Pipeline Starting
+2026-08-28 05:14:45,393 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:45,393 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:45,393 - smart_solar_iot - INFO - STEP 1: Generating simulation data
+2026-08-28 05:14:45,393 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:46,900 - smart_solar_iot - INFO -   Simulating: normal_clear_sky
+2026-08-28 05:14:46,941 - smart_solar_iot - INFO -     288 samples, mean power = 106.96 W
+2026-08-28 05:14:46,942 - smart_solar_iot - INFO -   Simulating: low_irradiance
+2026-08-28 05:14:46,974 - smart_solar_iot - INFO -     288 samples, mean power = 35.43 W
+2026-08-28 05:14:46,974 - smart_solar_iot - INFO -   Simulating: high_temperature
+2026-08-28 05:14:47,002 - smart_solar_iot - INFO -     288 samples, mean power = 99.21 W
+2026-08-28 05:14:47,002 - smart_solar_iot - INFO -   Simulating: cloud_variation
+2026-08-28 05:14:47,032 - smart_solar_iot - INFO -     288 samples, mean power = 67.99 W
+2026-08-28 05:14:47,032 - smart_solar_iot - INFO -   Simulating: dust_accumulation
+2026-08-28 05:14:47,059 - smart_solar_iot - INFO -     288 samples, mean power = 94.33 W
+2026-08-28 05:14:47,059 - smart_solar_iot - INFO -   Simulating: partial_shading
+2026-08-28 05:14:47,095 - smart_solar_iot - INFO -     288 samples, mean power = 54.17 W
+2026-08-28 05:14:47,095 - smart_solar_iot - INFO -   Simulating: sensor_failure
+2026-08-28 05:14:47,128 - smart_solar_iot - INFO -     288 samples, mean power = 96.91 W
+2026-08-28 05:14:47,128 - smart_solar_iot - INFO -   Simulating: communication_failure
+2026-08-28 05:14:47,156 - smart_solar_iot - INFO -     288 samples, mean power = 96.91 W
+2026-08-28 05:14:47,156 - smart_solar_iot - INFO -   Simulating: mixed_conditions
+2026-08-28 05:14:47,192 - smart_solar_iot - INFO -     288 samples, mean power = 56.99 W
+2026-08-28 05:14:47,192 - smart_solar_iot - INFO -   Simulating: main dataset (3 days, clear sky)
+2026-08-28 05:14:47,242 - smart_solar_iot - INFO -     Main dataset: 864 samples
+2026-08-28 05:14:47,242 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:47,242 - smart_solar_iot - INFO - STEP 2: Simulating IoT communication
+2026-08-28 05:14:47,242 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:47,255 - smart_solar_iot - INFO -   IoT comm: main
+2026-08-28 05:14:47,256 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:14:47,620 - smart_solar_iot - INFO -     Sent=864, Delivered=834, Loss=3.5%, Latency=49.8ms
+2026-08-28 05:14:47,620 - smart_solar_iot - INFO -   IoT comm: normal_clear_sky
+2026-08-28 05:14:47,620 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:14:47,739 - smart_solar_iot - INFO -     Sent=288, Delivered=283, Loss=1.7%, Latency=50.4ms
+2026-08-28 05:14:47,739 - smart_solar_iot - INFO -   IoT comm: low_irradiance
+2026-08-28 05:14:47,740 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:14:47,891 - smart_solar_iot - INFO -     Sent=288, Delivered=283, Loss=1.7%, Latency=50.4ms
+2026-08-28 05:14:47,892 - smart_solar_iot - INFO -   IoT comm: high_temperature
+2026-08-28 05:14:47,892 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:14:48,014 - smart_solar_iot - INFO -     Sent=288, Delivered=283, Loss=1.7%, Latency=50.4ms
+2026-08-28 05:14:48,014 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:48,014 - smart_solar_iot - INFO - STEP 3: Storing data in database
+2026-08-28 05:14:48,014 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:48,611 - smart_solar_iot.database - INFO - Database initialized at data/generated/solar_iot.db
+2026-08-28 05:14:48,664 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=normal_clear_sky)
+2026-08-28 05:14:48,711 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=low_irradiance)
+2026-08-28 05:14:48,836 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=high_temperature)
+2026-08-28 05:14:48,891 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=cloud_variation)
+2026-08-28 05:14:48,938 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=dust_accumulation)
+2026-08-28 05:14:48,993 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=partial_shading)
+2026-08-28 05:14:49,041 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=sensor_failure)
+2026-08-28 05:14:49,096 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=communication_failure)
+2026-08-28 05:14:49,146 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=mixed_conditions)
+2026-08-28 05:14:49,310 - smart_solar_iot.repository - INFO - Inserted 864 sensor measurements (scenario=normal)
+2026-08-28 05:14:49,438 - smart_solar_iot.repository - INFO - Inserted 864 communication logs
+2026-08-28 05:14:49,492 - smart_solar_iot.repository - INFO - Inserted 288 communication logs
+2026-08-28 05:14:49,536 - smart_solar_iot.repository - INFO - Inserted 288 communication logs
+2026-08-28 05:14:49,587 - smart_solar_iot.repository - INFO - Inserted 288 communication logs
+2026-08-28 05:14:49,587 - smart_solar_iot - INFO -   Database storage complete
+2026-08-28 05:14:49,588 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:49,588 - smart_solar_iot - INFO - STEP 4: Processing data
+2026-08-28 05:14:49,588 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:49,594 - smart_solar_iot - INFO -   Processing: normal_clear_sky
+2026-08-28 05:14:49,634 - smart_solar_iot - INFO -   Processing: low_irradiance
+2026-08-28 05:14:49,684 - smart_solar_iot - INFO -   Processing: high_temperature
+2026-08-28 05:14:49,729 - smart_solar_iot - INFO -   Processing: cloud_variation
+2026-08-28 05:14:49,778 - smart_solar_iot - INFO -   Processing: dust_accumulation
+2026-08-28 05:14:49,814 - smart_solar_iot - INFO -   Processing: partial_shading
+2026-08-28 05:14:49,849 - smart_solar_iot - INFO -   Processing: sensor_failure
+2026-08-28 05:14:49,874 - smart_solar_iot.preprocessing - INFO - Interpolating 5 missing values in measured_irradiance
+2026-08-28 05:14:49,908 - smart_solar_iot - INFO -   Processing: communication_failure
+2026-08-28 05:14:49,950 - smart_solar_iot - INFO -   Processing: mixed_conditions
+2026-08-28 05:14:49,993 - smart_solar_iot - INFO -   Processing: main
+2026-08-28 05:14:50,053 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:50,053 - smart_solar_iot - INFO - STEP 5: Running analytics
+2026-08-28 05:14:50,053 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:51,389 - smart_solar_iot - INFO -   Computing sensor calibration...
+2026-08-28 05:14:51,393 - smart_solar_iot - INFO -   Calibration done: 5 sensors
+2026-08-28 05:14:51,395 - smart_solar_iot - ERROR -   Performance failed for sensor_failure: operands could not be broadcast together with shapes (288,) (283,) 
+2026-08-28 05:14:51,396 - smart_solar_iot - INFO -   Running anomaly detection...
+2026-08-28 05:14:51,748 - smart_solar_iot - INFO -   Rule-based: 0 anomalies, Isolation Forest: 44 anomalies
+2026-08-28 05:14:51,748 - smart_solar_iot - INFO -   Running fault detection...
+2026-08-28 05:14:51,776 - smart_solar_iot - INFO -   Fault counts: {'normal': 864}
+2026-08-28 05:14:51,777 - smart_solar_iot - INFO - Skipping ML training (--skip-ml)
+2026-08-28 05:14:51,777 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:51,777 - smart_solar_iot - INFO - STEP 7: Running traditional monitoring baseline
+2026-08-28 05:14:51,777 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:51,789 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (72 samples from original)
+2026-08-28 05:14:51,838 - smart_solar_iot - INFO -   Traditional metrics: {'data_availability_pct': 8.333333333333332, 'energy_estimation_error_pct': np.float64(0.6442387706467068), 'fault_detection_rate_pct': 0.0, 'response_time_s': 3600, 'sampling_interval_min': 60, 'total_samples': 72}
+2026-08-28 05:14:51,838 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:51,838 - smart_solar_iot - INFO - STEP 8: Running experiments
+2026-08-28 05:14:51,838 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:14:51,882 - smart_solar_iot.experiment_runner - INFO - === Experiment: normal_clear_sky (seed=42) ===
+2026-08-28 05:14:51,897 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:14:52,048 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:10,102 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:10,102 - smart_solar_iot - INFO - SMART SOLAR IOT MONITORING SYSTEM
+2026-08-28 05:15:10,102 - smart_solar_iot - INFO - Master Pipeline Starting
+2026-08-28 05:15:10,102 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:10,102 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:10,102 - smart_solar_iot - INFO - STEP 1: Generating simulation data
+2026-08-28 05:15:10,102 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:11,555 - smart_solar_iot - INFO -   Simulating: normal_clear_sky
+2026-08-28 05:15:11,597 - smart_solar_iot - INFO -     288 samples, mean power = 106.96 W
+2026-08-28 05:15:11,597 - smart_solar_iot - INFO -   Simulating: low_irradiance
+2026-08-28 05:15:11,624 - smart_solar_iot - INFO -     288 samples, mean power = 35.43 W
+2026-08-28 05:15:11,625 - smart_solar_iot - INFO -   Simulating: high_temperature
+2026-08-28 05:15:11,653 - smart_solar_iot - INFO -     288 samples, mean power = 99.21 W
+2026-08-28 05:15:11,653 - smart_solar_iot - INFO -   Simulating: cloud_variation
+2026-08-28 05:15:11,690 - smart_solar_iot - INFO -     288 samples, mean power = 67.99 W
+2026-08-28 05:15:11,690 - smart_solar_iot - INFO -   Simulating: dust_accumulation
+2026-08-28 05:15:11,715 - smart_solar_iot - INFO -     288 samples, mean power = 94.33 W
+2026-08-28 05:15:11,715 - smart_solar_iot - INFO -   Simulating: partial_shading
+2026-08-28 05:15:11,741 - smart_solar_iot - INFO -     288 samples, mean power = 54.17 W
+2026-08-28 05:15:11,741 - smart_solar_iot - INFO -   Simulating: sensor_failure
+2026-08-28 05:15:11,776 - smart_solar_iot - INFO -     288 samples, mean power = 96.91 W
+2026-08-28 05:15:11,776 - smart_solar_iot - INFO -   Simulating: communication_failure
+2026-08-28 05:15:11,801 - smart_solar_iot - INFO -     288 samples, mean power = 96.91 W
+2026-08-28 05:15:11,802 - smart_solar_iot - INFO -   Simulating: mixed_conditions
+2026-08-28 05:15:11,828 - smart_solar_iot - INFO -     288 samples, mean power = 56.99 W
+2026-08-28 05:15:11,828 - smart_solar_iot - INFO -   Simulating: main dataset (3 days, clear sky)
+2026-08-28 05:15:11,908 - smart_solar_iot - INFO -     Main dataset: 864 samples
+2026-08-28 05:15:11,908 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:11,908 - smart_solar_iot - INFO - STEP 2: Simulating IoT communication
+2026-08-28 05:15:11,908 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:11,914 - smart_solar_iot - INFO -   IoT comm: main
+2026-08-28 05:15:11,914 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:12,329 - smart_solar_iot - INFO -     Sent=864, Delivered=834, Loss=3.5%, Latency=49.8ms
+2026-08-28 05:15:12,329 - smart_solar_iot - INFO -   IoT comm: normal_clear_sky
+2026-08-28 05:15:12,330 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:12,487 - smart_solar_iot - INFO -     Sent=288, Delivered=283, Loss=1.7%, Latency=50.4ms
+2026-08-28 05:15:12,487 - smart_solar_iot - INFO -   IoT comm: low_irradiance
+2026-08-28 05:15:12,488 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:12,619 - smart_solar_iot - INFO -     Sent=288, Delivered=283, Loss=1.7%, Latency=50.4ms
+2026-08-28 05:15:12,619 - smart_solar_iot - INFO -   IoT comm: high_temperature
+2026-08-28 05:15:12,620 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:12,751 - smart_solar_iot - INFO -     Sent=288, Delivered=283, Loss=1.7%, Latency=50.4ms
+2026-08-28 05:15:12,771 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:12,774 - smart_solar_iot - INFO - STEP 3: Storing data in database
+2026-08-28 05:15:12,774 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:13,273 - smart_solar_iot.database - INFO - Database initialized at data/generated/solar_iot.db
+2026-08-28 05:15:13,325 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=normal_clear_sky)
+2026-08-28 05:15:13,450 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=low_irradiance)
+2026-08-28 05:15:13,511 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=high_temperature)
+2026-08-28 05:15:13,560 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=cloud_variation)
+2026-08-28 05:15:13,616 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=dust_accumulation)
+2026-08-28 05:15:13,673 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=partial_shading)
+2026-08-28 05:15:13,724 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=sensor_failure)
+2026-08-28 05:15:13,777 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=communication_failure)
+2026-08-28 05:15:13,824 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=mixed_conditions)
+2026-08-28 05:15:13,982 - smart_solar_iot.repository - INFO - Inserted 864 sensor measurements (scenario=normal)
+2026-08-28 05:15:14,119 - smart_solar_iot.repository - INFO - Inserted 864 communication logs
+2026-08-28 05:15:14,173 - smart_solar_iot.repository - INFO - Inserted 288 communication logs
+2026-08-28 05:15:14,217 - smart_solar_iot.repository - INFO - Inserted 288 communication logs
+2026-08-28 05:15:14,263 - smart_solar_iot.repository - INFO - Inserted 288 communication logs
+2026-08-28 05:15:14,263 - smart_solar_iot - INFO -   Database storage complete
+2026-08-28 05:15:14,263 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:14,263 - smart_solar_iot - INFO - STEP 4: Processing data
+2026-08-28 05:15:14,263 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:14,266 - smart_solar_iot - INFO -   Processing: normal_clear_sky
+2026-08-28 05:15:14,308 - smart_solar_iot - INFO -   Processing: low_irradiance
+2026-08-28 05:15:14,344 - smart_solar_iot - INFO -   Processing: high_temperature
+2026-08-28 05:15:14,390 - smart_solar_iot - INFO -   Processing: cloud_variation
+2026-08-28 05:15:14,429 - smart_solar_iot - INFO -   Processing: dust_accumulation
+2026-08-28 05:15:14,465 - smart_solar_iot - INFO -   Processing: partial_shading
+2026-08-28 05:15:14,507 - smart_solar_iot - INFO -   Processing: sensor_failure
+2026-08-28 05:15:14,511 - smart_solar_iot.preprocessing - INFO - Interpolating 5 missing values in measured_irradiance
+2026-08-28 05:15:14,544 - smart_solar_iot - INFO -   Processing: communication_failure
+2026-08-28 05:15:14,589 - smart_solar_iot - INFO -   Processing: mixed_conditions
+2026-08-28 05:15:14,625 - smart_solar_iot - INFO -   Processing: main
+2026-08-28 05:15:14,696 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:14,697 - smart_solar_iot - INFO - STEP 5: Running analytics
+2026-08-28 05:15:14,697 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:15,918 - smart_solar_iot - INFO -   Computing sensor calibration...
+2026-08-28 05:15:15,920 - smart_solar_iot - INFO -   Calibration done: 5 sensors
+2026-08-28 05:15:15,923 - smart_solar_iot - INFO -   Running anomaly detection...
+2026-08-28 05:15:16,261 - smart_solar_iot - INFO -   Rule-based: 0 anomalies, Isolation Forest: 44 anomalies
+2026-08-28 05:15:16,262 - smart_solar_iot - INFO -   Running fault detection...
+2026-08-28 05:15:16,290 - smart_solar_iot - INFO -   Fault counts: {'normal': 864}
+2026-08-28 05:15:16,291 - smart_solar_iot - INFO - Skipping ML training (--skip-ml)
+2026-08-28 05:15:16,291 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:16,291 - smart_solar_iot - INFO - STEP 7: Running traditional monitoring baseline
+2026-08-28 05:15:16,291 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:16,299 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (72 samples from original)
+2026-08-28 05:15:16,341 - smart_solar_iot - INFO -   Traditional metrics: {'data_availability_pct': 8.333333333333332, 'energy_estimation_error_pct': np.float64(0.6442387706467068), 'fault_detection_rate_pct': 0.0, 'response_time_s': 3600, 'sampling_interval_min': 60, 'total_samples': 72}
+2026-08-28 05:15:16,341 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:16,341 - smart_solar_iot - INFO - STEP 8: Running experiments
+2026-08-28 05:15:16,341 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:16,349 - smart_solar_iot.experiment_runner - INFO - === Experiment: normal_clear_sky (seed=42) ===
+2026-08-28 05:15:16,374 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:16,524 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:16,546 - smart_solar_iot.experiment_runner - INFO - === Experiment: normal_clear_sky (seed=43) ===
+2026-08-28 05:15:16,579 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:16,731 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:16,773 - smart_solar_iot.experiment_runner - INFO - === Experiment: normal_clear_sky (seed=44) ===
+2026-08-28 05:15:16,789 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:16,942 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:16,990 - smart_solar_iot.experiment_runner - INFO - Completed normal_clear_sky with 3 repetitions
+2026-08-28 05:15:16,990 - smart_solar_iot.experiment_runner - INFO - === Experiment: low_irradiance (seed=42) ===
+2026-08-28 05:15:17,005 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:17,153 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:17,196 - smart_solar_iot.experiment_runner - INFO - === Experiment: low_irradiance (seed=43) ===
+2026-08-28 05:15:17,214 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:17,386 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:17,410 - smart_solar_iot.experiment_runner - INFO - === Experiment: low_irradiance (seed=44) ===
+2026-08-28 05:15:17,426 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:17,598 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:17,620 - smart_solar_iot.experiment_runner - INFO - Completed low_irradiance with 3 repetitions
+2026-08-28 05:15:17,620 - smart_solar_iot.experiment_runner - INFO - === Experiment: high_temperature (seed=42) ===
+2026-08-28 05:15:17,637 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:17,811 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:17,834 - smart_solar_iot.experiment_runner - INFO - === Experiment: high_temperature (seed=43) ===
+2026-08-28 05:15:17,851 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:18,026 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:18,051 - smart_solar_iot.experiment_runner - INFO - === Experiment: high_temperature (seed=44) ===
+2026-08-28 05:15:18,086 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:18,247 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:18,296 - smart_solar_iot.experiment_runner - INFO - Completed high_temperature with 3 repetitions
+2026-08-28 05:15:18,296 - smart_solar_iot.experiment_runner - INFO - === Experiment: cloud_variation (seed=42) ===
+2026-08-28 05:15:18,311 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:18,450 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:18,494 - smart_solar_iot.experiment_runner - INFO - === Experiment: cloud_variation (seed=43) ===
+2026-08-28 05:15:18,510 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:18,679 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:18,702 - smart_solar_iot.experiment_runner - INFO - === Experiment: cloud_variation (seed=44) ===
+2026-08-28 05:15:18,719 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:18,888 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:18,908 - smart_solar_iot.experiment_runner - INFO - Completed cloud_variation with 3 repetitions
+2026-08-28 05:15:18,909 - smart_solar_iot.experiment_runner - INFO - === Experiment: dust_accumulation (seed=42) ===
+2026-08-28 05:15:18,924 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:19,090 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:19,110 - smart_solar_iot.experiment_runner - INFO - === Experiment: dust_accumulation (seed=43) ===
+2026-08-28 05:15:19,127 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:19,293 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:19,315 - smart_solar_iot.experiment_runner - INFO - === Experiment: dust_accumulation (seed=44) ===
+2026-08-28 05:15:19,329 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:19,487 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:19,512 - smart_solar_iot.experiment_runner - INFO - Completed dust_accumulation with 3 repetitions
+2026-08-28 05:15:19,512 - smart_solar_iot.experiment_runner - INFO - === Experiment: partial_shading (seed=42) ===
+2026-08-28 05:15:19,529 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:19,718 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:19,740 - smart_solar_iot.experiment_runner - INFO - === Experiment: partial_shading (seed=43) ===
+2026-08-28 05:15:19,771 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:19,928 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:19,972 - smart_solar_iot.experiment_runner - INFO - === Experiment: partial_shading (seed=44) ===
+2026-08-28 05:15:19,989 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:20,144 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:20,187 - smart_solar_iot.experiment_runner - INFO - Completed partial_shading with 3 repetitions
+2026-08-28 05:15:20,187 - smart_solar_iot.experiment_runner - INFO - === Experiment: sensor_failure (seed=42) ===
+2026-08-28 05:15:20,206 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:20,383 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:20,406 - smart_solar_iot.experiment_runner - INFO - === Experiment: sensor_failure (seed=43) ===
+2026-08-28 05:15:20,425 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:20,600 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:20,623 - smart_solar_iot.experiment_runner - INFO - === Experiment: sensor_failure (seed=44) ===
+2026-08-28 05:15:20,641 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:20,819 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:20,842 - smart_solar_iot.experiment_runner - INFO - Completed sensor_failure with 3 repetitions
+2026-08-28 05:15:20,842 - smart_solar_iot.experiment_runner - INFO - === Experiment: communication_failure (seed=42) ===
+2026-08-28 05:15:20,877 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:21,025 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:21,046 - smart_solar_iot.experiment_runner - INFO - === Experiment: communication_failure (seed=43) ===
+2026-08-28 05:15:21,077 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:21,228 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:21,252 - smart_solar_iot.experiment_runner - INFO - === Experiment: communication_failure (seed=44) ===
+2026-08-28 05:15:21,285 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:21,447 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:21,491 - smart_solar_iot.experiment_runner - INFO - Completed communication_failure with 3 repetitions
+2026-08-28 05:15:21,491 - smart_solar_iot.experiment_runner - INFO - === Experiment: mixed_conditions (seed=42) ===
+2026-08-28 05:15:21,508 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:21,684 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:21,705 - smart_solar_iot.experiment_runner - INFO - === Experiment: mixed_conditions (seed=43) ===
+2026-08-28 05:15:21,721 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:21,897 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:21,920 - smart_solar_iot.experiment_runner - INFO - === Experiment: mixed_conditions (seed=44) ===
+2026-08-28 05:15:21,936 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:22,106 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:15:22,126 - smart_solar_iot.experiment_runner - INFO - Completed mixed_conditions with 3 repetitions
+2026-08-28 05:15:22,131 - smart_solar_iot - INFO -   Experiments complete: 27 rows in summary
+2026-08-28 05:15:22,131 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:22,131 - smart_solar_iot - INFO - STEP 9: Comparing IoT vs traditional
+2026-08-28 05:15:22,131 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:22,136 - smart_solar_iot - INFO -   Comparison complete
+2026-08-28 05:15:22,136 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:22,136 - smart_solar_iot - INFO - STEP 10: Generating tables
+2026-08-28 05:15:22,136 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:22,147 - smart_solar_iot - INFO -   Tables saved to /tmp/cc-agent/70328229/project/results/tables
+2026-08-28 05:15:22,147 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:22,147 - smart_solar_iot - INFO - STEP 11: Generating figures
+2026-08-28 05:15:22,147 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:23,968 - matplotlib.font_manager - INFO - Failed to extract font properties from /usr/share/fonts/truetype/noto/NotoColorEmoji.ttf: Non-scalable fonts are not supported
+2026-08-28 05:15:24,183 - matplotlib.font_manager - INFO - generated new fontManager
+2026-08-28 05:15:33,595 - smart_solar_iot.research_figures - INFO - Generated 17 figures in results/figures
+2026-08-28 05:15:33,595 - smart_solar_iot - INFO -   Figures generated
+2026-08-28 05:15:33,595 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:33,595 - smart_solar_iot - INFO - STEP 12: Generating final report
+2026-08-28 05:15:33,595 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:33,644 - smart_solar_iot - INFO -   Report saved to /tmp/cc-agent/70328229/project/results/reports/experiment_report.md
+2026-08-28 05:15:33,644 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:33,644 - smart_solar_iot - INFO - PIPELINE COMPLETE in 23.5s
+2026-08-28 05:15:33,644 - smart_solar_iot - INFO - Results saved to: results/
+2026-08-28 05:15:33,644 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:39,017 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:39,017 - smart_solar_iot - INFO - SMART SOLAR IOT MONITORING SYSTEM
+2026-08-28 05:15:39,017 - smart_solar_iot - INFO - Master Pipeline Starting
+2026-08-28 05:15:39,017 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:39,017 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:39,017 - smart_solar_iot - INFO - STEP 1: Generating simulation data
+2026-08-28 05:15:39,017 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:40,449 - smart_solar_iot - INFO -   Simulating: normal_clear_sky
+2026-08-28 05:15:40,492 - smart_solar_iot - INFO -     288 samples, mean power = 106.96 W
+2026-08-28 05:15:40,493 - smart_solar_iot - INFO -   Simulating: low_irradiance
+2026-08-28 05:15:40,527 - smart_solar_iot - INFO -     288 samples, mean power = 35.43 W
+2026-08-28 05:15:40,527 - smart_solar_iot - INFO -   Simulating: high_temperature
+2026-08-28 05:15:40,553 - smart_solar_iot - INFO -     288 samples, mean power = 99.21 W
+2026-08-28 05:15:40,553 - smart_solar_iot - INFO -   Simulating: cloud_variation
+2026-08-28 05:15:40,589 - smart_solar_iot - INFO -     288 samples, mean power = 67.99 W
+2026-08-28 05:15:40,589 - smart_solar_iot - INFO -   Simulating: dust_accumulation
+2026-08-28 05:15:40,618 - smart_solar_iot - INFO -     288 samples, mean power = 94.33 W
+2026-08-28 05:15:40,618 - smart_solar_iot - INFO -   Simulating: partial_shading
+2026-08-28 05:15:40,648 - smart_solar_iot - INFO -     288 samples, mean power = 54.17 W
+2026-08-28 05:15:40,648 - smart_solar_iot - INFO -   Simulating: sensor_failure
+2026-08-28 05:15:40,683 - smart_solar_iot - INFO -     288 samples, mean power = 96.91 W
+2026-08-28 05:15:40,683 - smart_solar_iot - INFO -   Simulating: communication_failure
+2026-08-28 05:15:40,708 - smart_solar_iot - INFO -     288 samples, mean power = 96.91 W
+2026-08-28 05:15:40,709 - smart_solar_iot - INFO -   Simulating: mixed_conditions
+2026-08-28 05:15:40,743 - smart_solar_iot - INFO -     288 samples, mean power = 56.99 W
+2026-08-28 05:15:40,744 - smart_solar_iot - INFO -   Simulating: main dataset (3 days, clear sky)
+2026-08-28 05:15:40,801 - smart_solar_iot - INFO -     Main dataset: 864 samples
+2026-08-28 05:15:40,801 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:40,801 - smart_solar_iot - INFO - STEP 2: Simulating IoT communication
+2026-08-28 05:15:40,801 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:40,806 - smart_solar_iot - INFO -   IoT comm: main
+2026-08-28 05:15:40,807 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:41,202 - smart_solar_iot - INFO -     Sent=864, Delivered=834, Loss=3.5%, Latency=49.8ms
+2026-08-28 05:15:41,203 - smart_solar_iot - INFO -   IoT comm: normal_clear_sky
+2026-08-28 05:15:41,203 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:41,327 - smart_solar_iot - INFO -     Sent=288, Delivered=283, Loss=1.7%, Latency=50.4ms
+2026-08-28 05:15:41,328 - smart_solar_iot - INFO -   IoT comm: low_irradiance
+2026-08-28 05:15:41,328 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:41,474 - smart_solar_iot - INFO -     Sent=288, Delivered=283, Loss=1.7%, Latency=50.4ms
+2026-08-28 05:15:41,474 - smart_solar_iot - INFO -   IoT comm: high_temperature
+2026-08-28 05:15:41,478 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:15:41,606 - smart_solar_iot - INFO -     Sent=288, Delivered=283, Loss=1.7%, Latency=50.4ms
+2026-08-28 05:15:41,607 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:41,607 - smart_solar_iot - INFO - STEP 3: Storing data in database
+2026-08-28 05:15:41,607 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:42,133 - smart_solar_iot.database - INFO - Database initialized at data/generated/solar_iot.db
+2026-08-28 05:15:42,190 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=normal_clear_sky)
+2026-08-28 05:15:42,240 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=low_irradiance)
+2026-08-28 05:15:42,299 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=high_temperature)
+2026-08-28 05:15:42,426 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=cloud_variation)
+2026-08-28 05:15:42,478 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=dust_accumulation)
+2026-08-28 05:15:42,525 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=partial_shading)
+2026-08-28 05:15:42,586 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=sensor_failure)
+2026-08-28 05:15:42,638 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=communication_failure)
+2026-08-28 05:15:42,696 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=mixed_conditions)
+2026-08-28 05:15:42,850 - smart_solar_iot.repository - INFO - Inserted 864 sensor measurements (scenario=normal)
+2026-08-28 05:15:43,009 - smart_solar_iot.repository - INFO - Inserted 864 communication logs
+2026-08-28 05:15:43,058 - smart_solar_iot.repository - INFO - Inserted 288 communication logs
+2026-08-28 05:15:43,115 - smart_solar_iot.repository - INFO - Inserted 288 communication logs
+2026-08-28 05:15:43,158 - smart_solar_iot.repository - INFO - Inserted 288 communication logs
+2026-08-28 05:15:43,158 - smart_solar_iot - INFO -   Database storage complete
+2026-08-28 05:15:43,158 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:43,158 - smart_solar_iot - INFO - STEP 4: Processing data
+2026-08-28 05:15:43,158 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:43,161 - smart_solar_iot - INFO -   Processing: normal_clear_sky
+2026-08-28 05:15:43,209 - smart_solar_iot - INFO -   Processing: low_irradiance
+2026-08-28 05:15:43,246 - smart_solar_iot - INFO -   Processing: high_temperature
+2026-08-28 05:15:43,291 - smart_solar_iot - INFO -   Processing: cloud_variation
+2026-08-28 05:15:43,327 - smart_solar_iot - INFO -   Processing: dust_accumulation
+2026-08-28 05:15:43,373 - smart_solar_iot - INFO -   Processing: partial_shading
+2026-08-28 05:15:43,409 - smart_solar_iot - INFO -   Processing: sensor_failure
+2026-08-28 05:15:43,413 - smart_solar_iot.preprocessing - INFO - Interpolating 5 missing values in measured_irradiance
+2026-08-28 05:15:43,445 - smart_solar_iot - INFO -   Processing: communication_failure
+2026-08-28 05:15:43,491 - smart_solar_iot - INFO -   Processing: mixed_conditions
+2026-08-28 05:15:43,527 - smart_solar_iot - INFO -   Processing: main
+2026-08-28 05:15:43,597 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:43,598 - smart_solar_iot - INFO - STEP 5: Running analytics
+2026-08-28 05:15:43,598 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:44,817 - smart_solar_iot - INFO -   Computing sensor calibration...
+2026-08-28 05:15:44,819 - smart_solar_iot - INFO -   Calibration done: 5 sensors
+2026-08-28 05:15:44,822 - smart_solar_iot - INFO -   Running anomaly detection...
+2026-08-28 05:15:45,144 - smart_solar_iot - INFO -   Rule-based: 0 anomalies, Isolation Forest: 44 anomalies
+2026-08-28 05:15:45,144 - smart_solar_iot - INFO -   Running fault detection...
+2026-08-28 05:15:45,165 - smart_solar_iot - INFO -   Fault counts: {'normal': 864}
+2026-08-28 05:15:45,166 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:45,166 - smart_solar_iot - INFO - STEP 6: Training ML models
+2026-08-28 05:15:45,166 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:15:45,182 - smart_solar_iot.ml_train - INFO - Training power prediction models...
+2026-08-28 05:15:45,208 - smart_solar_iot.ml_train - INFO - Training linear_regression...
+2026-08-28 05:15:45,215 - smart_solar_iot.power_prediction - INFO - Saved linear_regression model to models/ml
+2026-08-28 05:15:45,216 - smart_solar_iot.ml_train - INFO - linear_regression: MAE=2.012, RMSE=2.519, R2=1.000
+2026-08-28 05:15:45,216 - smart_solar_iot.ml_train - INFO - Training random_forest...
+2026-08-28 05:15:45,695 - smart_solar_iot.power_prediction - INFO - Saved random_forest model to models/ml
+2026-08-28 05:15:45,695 - smart_solar_iot.ml_train - INFO - random_forest: MAE=1.990, RMSE=2.781, R2=1.000
+2026-08-28 05:15:45,696 - smart_solar_iot.ml_train - INFO - Training gradient_boosting...
+2026-08-28 05:15:45,912 - smart_solar_iot.power_prediction - INFO - Saved gradient_boosting model to models/ml
+2026-08-28 05:15:45,912 - smart_solar_iot.ml_train - INFO - gradient_boosting: MAE=1.986, RMSE=2.741, R2=1.000
+2026-08-28 05:15:45,912 - smart_solar_iot.ml_train - INFO - Training xgboost...
+2026-08-28 05:15:46,096 - smart_solar_iot.power_prediction - INFO - Saved xgboost model to models/ml
+2026-08-28 05:15:46,096 - smart_solar_iot.ml_train - INFO - xgboost: MAE=2.237, RMSE=3.120, R2=1.000
+2026-08-28 05:15:46,100 - smart_solar_iot.ml_evaluate - INFO - Saved predictions for linear_regression
+2026-08-28 05:15:46,103 - smart_solar_iot.ml_evaluate - INFO - Saved predictions for random_forest
+2026-08-28 05:15:46,105 - smart_solar_iot.ml_evaluate - INFO - Saved predictions for gradient_boosting
+2026-08-28 05:15:46,107 - smart_solar_iot.ml_evaluate - INFO - Saved predictions for xgboost
+2026-08-28 05:15:46,109 - smart_solar_iot.ml_evaluate - INFO - Saved metrics table: ml_model_comparison.csv
+2026-08-28 05:15:46,109 - smart_solar_iot - INFO -   Power models trained: ['linear_regression', 'random_forest', 'gradient_boosting', 'xgboost']
+2026-08-28 05:15:46,109 - smart_solar_iot.ml_train - INFO - Training fault classification models...
+2026-08-28 05:15:46,175 - smart_solar_iot.ml_train - WARNING - Only one fault class in data. Skipping classification training.
+2026-08-28 05:16:03,741 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:03,741 - smart_solar_iot - INFO - SMART SOLAR IOT MONITORING SYSTEM
+2026-08-28 05:16:03,741 - smart_solar_iot - INFO - Master Pipeline Starting
+2026-08-28 05:16:03,741 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:03,741 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:03,741 - smart_solar_iot - INFO - STEP 1: Generating simulation data
+2026-08-28 05:16:03,741 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:05,241 - smart_solar_iot - INFO -   Simulating: normal_clear_sky
+2026-08-28 05:16:05,285 - smart_solar_iot - INFO -     288 samples, mean power = 106.96 W
+2026-08-28 05:16:05,285 - smart_solar_iot - INFO -   Simulating: low_irradiance
+2026-08-28 05:16:05,312 - smart_solar_iot - INFO -     288 samples, mean power = 35.43 W
+2026-08-28 05:16:05,312 - smart_solar_iot - INFO -   Simulating: high_temperature
+2026-08-28 05:16:05,339 - smart_solar_iot - INFO -     288 samples, mean power = 99.21 W
+2026-08-28 05:16:05,339 - smart_solar_iot - INFO -   Simulating: cloud_variation
+2026-08-28 05:16:05,375 - smart_solar_iot - INFO -     288 samples, mean power = 67.99 W
+2026-08-28 05:16:05,375 - smart_solar_iot - INFO -   Simulating: dust_accumulation
+2026-08-28 05:16:05,401 - smart_solar_iot - INFO -     288 samples, mean power = 94.33 W
+2026-08-28 05:16:05,401 - smart_solar_iot - INFO -   Simulating: partial_shading
+2026-08-28 05:16:05,425 - smart_solar_iot - INFO -     288 samples, mean power = 54.17 W
+2026-08-28 05:16:05,425 - smart_solar_iot - INFO -   Simulating: sensor_failure
+2026-08-28 05:16:05,454 - smart_solar_iot - INFO -     288 samples, mean power = 96.91 W
+2026-08-28 05:16:05,454 - smart_solar_iot - INFO -   Simulating: communication_failure
+2026-08-28 05:16:05,485 - smart_solar_iot - INFO -     288 samples, mean power = 96.91 W
+2026-08-28 05:16:05,486 - smart_solar_iot - INFO -   Simulating: mixed_conditions
+2026-08-28 05:16:05,511 - smart_solar_iot - INFO -     288 samples, mean power = 56.99 W
+2026-08-28 05:16:05,511 - smart_solar_iot - INFO -   Simulating: main dataset (3 days, clear sky)
+2026-08-28 05:16:05,562 - smart_solar_iot - INFO -     Main dataset: 864 samples
+2026-08-28 05:16:05,562 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:05,562 - smart_solar_iot - INFO - STEP 2: Simulating IoT communication
+2026-08-28 05:16:05,562 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:05,582 - smart_solar_iot - INFO -   IoT comm: main
+2026-08-28 05:16:05,583 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:06,005 - smart_solar_iot - INFO -     Sent=864, Delivered=834, Loss=3.5%, Latency=49.8ms
+2026-08-28 05:16:06,005 - smart_solar_iot - INFO -   IoT comm: normal_clear_sky
+2026-08-28 05:16:06,006 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:06,139 - smart_solar_iot - INFO -     Sent=288, Delivered=283, Loss=1.7%, Latency=50.4ms
+2026-08-28 05:16:06,139 - smart_solar_iot - INFO -   IoT comm: low_irradiance
+2026-08-28 05:16:06,175 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:06,309 - smart_solar_iot - INFO -     Sent=288, Delivered=283, Loss=1.7%, Latency=50.4ms
+2026-08-28 05:16:06,309 - smart_solar_iot - INFO -   IoT comm: high_temperature
+2026-08-28 05:16:06,309 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:06,433 - smart_solar_iot - INFO -     Sent=288, Delivered=283, Loss=1.7%, Latency=50.4ms
+2026-08-28 05:16:06,433 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:06,433 - smart_solar_iot - INFO - STEP 3: Storing data in database
+2026-08-28 05:16:06,433 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:06,994 - smart_solar_iot.database - INFO - Database initialized at data/generated/solar_iot.db
+2026-08-28 05:16:07,051 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=normal_clear_sky)
+2026-08-28 05:16:07,191 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=low_irradiance)
+2026-08-28 05:16:07,240 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=high_temperature)
+2026-08-28 05:16:07,300 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=cloud_variation)
+2026-08-28 05:16:07,350 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=dust_accumulation)
+2026-08-28 05:16:07,413 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=partial_shading)
+2026-08-28 05:16:07,476 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=sensor_failure)
+2026-08-28 05:16:07,531 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=communication_failure)
+2026-08-28 05:16:07,585 - smart_solar_iot.repository - INFO - Inserted 288 sensor measurements (scenario=mixed_conditions)
+2026-08-28 05:16:07,730 - smart_solar_iot.repository - INFO - Inserted 864 sensor measurements (scenario=normal)
+2026-08-28 05:16:07,858 - smart_solar_iot.repository - INFO - Inserted 864 communication logs
+2026-08-28 05:16:07,915 - smart_solar_iot.repository - INFO - Inserted 288 communication logs
+2026-08-28 05:16:07,960 - smart_solar_iot.repository - INFO - Inserted 288 communication logs
+2026-08-28 05:16:08,014 - smart_solar_iot.repository - INFO - Inserted 288 communication logs
+2026-08-28 05:16:08,014 - smart_solar_iot - INFO -   Database storage complete
+2026-08-28 05:16:08,015 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:08,015 - smart_solar_iot - INFO - STEP 4: Processing data
+2026-08-28 05:16:08,015 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:08,018 - smart_solar_iot - INFO -   Processing: normal_clear_sky
+2026-08-28 05:16:08,054 - smart_solar_iot - INFO -   Processing: low_irradiance
+2026-08-28 05:16:08,101 - smart_solar_iot - INFO -   Processing: high_temperature
+2026-08-28 05:16:08,134 - smart_solar_iot - INFO -   Processing: cloud_variation
+2026-08-28 05:16:08,176 - smart_solar_iot - INFO -   Processing: dust_accumulation
+2026-08-28 05:16:08,209 - smart_solar_iot - INFO -   Processing: partial_shading
+2026-08-28 05:16:08,244 - smart_solar_iot - INFO -   Processing: sensor_failure
+2026-08-28 05:16:08,247 - smart_solar_iot.preprocessing - INFO - Interpolating 5 missing values in measured_irradiance
+2026-08-28 05:16:08,292 - smart_solar_iot - INFO -   Processing: communication_failure
+2026-08-28 05:16:08,328 - smart_solar_iot - INFO -   Processing: mixed_conditions
+2026-08-28 05:16:08,366 - smart_solar_iot - INFO -   Processing: main
+2026-08-28 05:16:08,430 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:08,430 - smart_solar_iot - INFO - STEP 5: Running analytics
+2026-08-28 05:16:08,430 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:09,684 - smart_solar_iot - INFO -   Computing sensor calibration...
+2026-08-28 05:16:09,687 - smart_solar_iot - INFO -   Calibration done: 5 sensors
+2026-08-28 05:16:09,690 - smart_solar_iot - INFO -   Running anomaly detection...
+2026-08-28 05:16:10,032 - smart_solar_iot - INFO -   Rule-based: 0 anomalies, Isolation Forest: 44 anomalies
+2026-08-28 05:16:10,032 - smart_solar_iot - INFO -   Running fault detection...
+2026-08-28 05:16:10,054 - smart_solar_iot - INFO -   Fault counts: {'normal': 864}
+2026-08-28 05:16:10,055 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:10,055 - smart_solar_iot - INFO - STEP 6: Training ML models
+2026-08-28 05:16:10,055 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:10,061 - smart_solar_iot.ml_train - INFO - Training power prediction models...
+2026-08-28 05:16:10,099 - smart_solar_iot.ml_train - INFO - Training linear_regression...
+2026-08-28 05:16:10,106 - smart_solar_iot.power_prediction - INFO - Saved linear_regression model to models/ml
+2026-08-28 05:16:10,107 - smart_solar_iot.ml_train - INFO - linear_regression: MAE=2.012, RMSE=2.519, R2=1.000
+2026-08-28 05:16:10,107 - smart_solar_iot.ml_train - INFO - Training random_forest...
+2026-08-28 05:16:10,590 - smart_solar_iot.power_prediction - INFO - Saved random_forest model to models/ml
+2026-08-28 05:16:10,591 - smart_solar_iot.ml_train - INFO - random_forest: MAE=1.990, RMSE=2.781, R2=1.000
+2026-08-28 05:16:10,591 - smart_solar_iot.ml_train - INFO - Training gradient_boosting...
+2026-08-28 05:16:10,820 - smart_solar_iot.power_prediction - INFO - Saved gradient_boosting model to models/ml
+2026-08-28 05:16:10,820 - smart_solar_iot.ml_train - INFO - gradient_boosting: MAE=1.986, RMSE=2.741, R2=1.000
+2026-08-28 05:16:10,820 - smart_solar_iot.ml_train - INFO - Training xgboost...
+2026-08-28 05:16:10,996 - smart_solar_iot.power_prediction - INFO - Saved xgboost model to models/ml
+2026-08-28 05:16:10,996 - smart_solar_iot.ml_train - INFO - xgboost: MAE=2.237, RMSE=3.120, R2=1.000
+2026-08-28 05:16:11,000 - smart_solar_iot.ml_evaluate - INFO - Saved predictions for linear_regression
+2026-08-28 05:16:11,002 - smart_solar_iot.ml_evaluate - INFO - Saved predictions for random_forest
+2026-08-28 05:16:11,005 - smart_solar_iot.ml_evaluate - INFO - Saved predictions for gradient_boosting
+2026-08-28 05:16:11,007 - smart_solar_iot.ml_evaluate - INFO - Saved predictions for xgboost
+2026-08-28 05:16:11,008 - smart_solar_iot.ml_evaluate - INFO - Saved metrics table: ml_model_comparison.csv
+2026-08-28 05:16:11,009 - smart_solar_iot - INFO -   Power models trained: ['linear_regression', 'random_forest', 'gradient_boosting', 'xgboost']
+2026-08-28 05:16:11,009 - smart_solar_iot.ml_train - INFO - Training fault classification models...
+2026-08-28 05:16:11,062 - smart_solar_iot.ml_train - WARNING - Only one fault class in data. Skipping classification training.
+2026-08-28 05:16:11,072 - smart_solar_iot.ml_train - INFO - Training fault classification models...
+2026-08-28 05:16:11,079 - smart_solar_iot.preprocessing - INFO - Removed 2304 duplicate rows
+2026-08-28 05:16:11,079 - smart_solar_iot.preprocessing - INFO - Interpolating 1 missing values in measured_irradiance
+2026-08-28 05:16:11,127 - smart_solar_iot.ml_train - INFO - Training classifier: random_forest...
+2026-08-28 05:16:11,417 - smart_solar_iot.ml_train - INFO - random_forest: acc=0.707, f1=0.614
+2026-08-28 05:16:11,418 - smart_solar_iot.ml_train - INFO - Training classifier: gradient_boosting...
+2026-08-28 05:16:12,041 - smart_solar_iot.ml_train - INFO - gradient_boosting: acc=0.638, f1=0.595
+2026-08-28 05:16:12,041 - smart_solar_iot.ml_train - INFO - Training classifier: svm...
+2026-08-28 05:16:12,094 - smart_solar_iot.ml_train - INFO - svm: acc=0.741, f1=0.631
+2026-08-28 05:16:12,097 - smart_solar_iot.ml_evaluate - INFO - Saved metrics table: fault_classification_comparison.csv
+2026-08-28 05:16:12,097 - smart_solar_iot - INFO -   Classifiers trained: ['random_forest', 'gradient_boosting', 'svm']
+2026-08-28 05:16:12,097 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:12,097 - smart_solar_iot - INFO - STEP 7: Running traditional monitoring baseline
+2026-08-28 05:16:12,097 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:12,104 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (72 samples from original)
+2026-08-28 05:16:12,145 - smart_solar_iot - INFO -   Traditional metrics: {'data_availability_pct': 8.333333333333332, 'energy_estimation_error_pct': np.float64(0.6442387706467068), 'fault_detection_rate_pct': 0.0, 'response_time_s': 3600, 'sampling_interval_min': 60, 'total_samples': 72}
+2026-08-28 05:16:12,145 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:12,145 - smart_solar_iot - INFO - STEP 8: Running experiments
+2026-08-28 05:16:12,145 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:12,159 - smart_solar_iot.experiment_runner - INFO - === Experiment: normal_clear_sky (seed=42) ===
+2026-08-28 05:16:12,188 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:12,335 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:12,375 - smart_solar_iot.experiment_runner - INFO - === Experiment: normal_clear_sky (seed=43) ===
+2026-08-28 05:16:12,392 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:12,542 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:12,585 - smart_solar_iot.experiment_runner - INFO - === Experiment: normal_clear_sky (seed=44) ===
+2026-08-28 05:16:12,602 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:12,752 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:12,794 - smart_solar_iot.experiment_runner - INFO - Completed normal_clear_sky with 3 repetitions
+2026-08-28 05:16:12,794 - smart_solar_iot.experiment_runner - INFO - === Experiment: low_irradiance (seed=42) ===
+2026-08-28 05:16:12,812 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:12,980 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:13,003 - smart_solar_iot.experiment_runner - INFO - === Experiment: low_irradiance (seed=43) ===
+2026-08-28 05:16:13,020 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:13,195 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:13,215 - smart_solar_iot.experiment_runner - INFO - === Experiment: low_irradiance (seed=44) ===
+2026-08-28 05:16:13,231 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:13,402 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:13,424 - smart_solar_iot.experiment_runner - INFO - Completed low_irradiance with 3 repetitions
+2026-08-28 05:16:13,424 - smart_solar_iot.experiment_runner - INFO - === Experiment: high_temperature (seed=42) ===
+2026-08-28 05:16:13,439 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:13,615 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:13,636 - smart_solar_iot.experiment_runner - INFO - === Experiment: high_temperature (seed=43) ===
+2026-08-28 05:16:13,651 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:13,815 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:13,836 - smart_solar_iot.experiment_runner - INFO - === Experiment: high_temperature (seed=44) ===
+2026-08-28 05:16:13,851 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:14,012 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:14,033 - smart_solar_iot.experiment_runner - INFO - Completed high_temperature with 3 repetitions
+2026-08-28 05:16:14,034 - smart_solar_iot.experiment_runner - INFO - === Experiment: cloud_variation (seed=42) ===
+2026-08-28 05:16:14,049 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:14,214 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:14,233 - smart_solar_iot.experiment_runner - INFO - === Experiment: cloud_variation (seed=43) ===
+2026-08-28 05:16:14,249 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:14,408 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:14,430 - smart_solar_iot.experiment_runner - INFO - === Experiment: cloud_variation (seed=44) ===
+2026-08-28 05:16:14,447 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:14,618 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:14,639 - smart_solar_iot.experiment_runner - INFO - Completed cloud_variation with 3 repetitions
+2026-08-28 05:16:14,639 - smart_solar_iot.experiment_runner - INFO - === Experiment: dust_accumulation (seed=42) ===
+2026-08-28 05:16:14,675 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:14,825 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:14,846 - smart_solar_iot.experiment_runner - INFO - === Experiment: dust_accumulation (seed=43) ===
+2026-08-28 05:16:14,877 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:15,025 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:15,047 - smart_solar_iot.experiment_runner - INFO - === Experiment: dust_accumulation (seed=44) ===
+2026-08-28 05:16:15,080 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:15,232 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:15,254 - smart_solar_iot.experiment_runner - INFO - Completed dust_accumulation with 3 repetitions
+2026-08-28 05:16:15,272 - smart_solar_iot.experiment_runner - INFO - === Experiment: partial_shading (seed=42) ===
+2026-08-28 05:16:15,288 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:15,439 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:15,482 - smart_solar_iot.experiment_runner - INFO - === Experiment: partial_shading (seed=43) ===
+2026-08-28 05:16:15,500 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:15,674 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:15,698 - smart_solar_iot.experiment_runner - INFO - === Experiment: partial_shading (seed=44) ===
+2026-08-28 05:16:15,713 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:15,878 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:15,899 - smart_solar_iot.experiment_runner - INFO - Completed partial_shading with 3 repetitions
+2026-08-28 05:16:15,899 - smart_solar_iot.experiment_runner - INFO - === Experiment: sensor_failure (seed=42) ===
+2026-08-28 05:16:15,919 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:16,089 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:16,111 - smart_solar_iot.experiment_runner - INFO - === Experiment: sensor_failure (seed=43) ===
+2026-08-28 05:16:16,129 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:16,294 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:16,314 - smart_solar_iot.experiment_runner - INFO - === Experiment: sensor_failure (seed=44) ===
+2026-08-28 05:16:16,333 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:16,493 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:16,517 - smart_solar_iot.experiment_runner - INFO - Completed sensor_failure with 3 repetitions
+2026-08-28 05:16:16,517 - smart_solar_iot.experiment_runner - INFO - === Experiment: communication_failure (seed=42) ===
+2026-08-28 05:16:16,533 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:16,704 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:16,728 - smart_solar_iot.experiment_runner - INFO - === Experiment: communication_failure (seed=43) ===
+2026-08-28 05:16:16,753 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:16,916 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:16,938 - smart_solar_iot.experiment_runner - INFO - === Experiment: communication_failure (seed=44) ===
+2026-08-28 05:16:16,972 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:17,117 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:17,140 - smart_solar_iot.experiment_runner - INFO - Completed communication_failure with 3 repetitions
+2026-08-28 05:16:17,140 - smart_solar_iot.experiment_runner - INFO - === Experiment: mixed_conditions (seed=42) ===
+2026-08-28 05:16:17,175 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:17,323 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:17,343 - smart_solar_iot.experiment_runner - INFO - === Experiment: mixed_conditions (seed=43) ===
+2026-08-28 05:16:17,377 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:17,519 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:17,539 - smart_solar_iot.experiment_runner - INFO - === Experiment: mixed_conditions (seed=44) ===
+2026-08-28 05:16:17,572 - smart_solar_iot.mqtt_publisher - INFO - Using simulated MQTT broker (no external broker required)
+2026-08-28 05:16:17,881 - smart_solar_iot.traditional - INFO - Traditional monitoring: downsampled to 60min (24 samples from original)
+2026-08-28 05:16:17,904 - smart_solar_iot.experiment_runner - INFO - Completed mixed_conditions with 3 repetitions
+2026-08-28 05:16:17,908 - smart_solar_iot - INFO -   Experiments complete: 27 rows in summary
+2026-08-28 05:16:17,908 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:17,908 - smart_solar_iot - INFO - STEP 9: Comparing IoT vs traditional
+2026-08-28 05:16:17,908 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:17,915 - smart_solar_iot - INFO -   Comparison complete
+2026-08-28 05:16:17,915 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:17,915 - smart_solar_iot - INFO - STEP 10: Generating tables
+2026-08-28 05:16:17,915 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:17,926 - smart_solar_iot - INFO -   Tables saved to /tmp/cc-agent/70328229/project/results/tables
+2026-08-28 05:16:17,926 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:17,926 - smart_solar_iot - INFO - STEP 11: Generating figures
+2026-08-28 05:16:17,926 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:31,916 - smart_solar_iot.research_figures - INFO - Generated 28 figures in results/figures
+2026-08-28 05:16:31,916 - smart_solar_iot - INFO -   Figures generated
+2026-08-28 05:16:31,916 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:31,916 - smart_solar_iot - INFO - STEP 12: Generating final report
+2026-08-28 05:16:31,916 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:31,990 - smart_solar_iot - INFO -   Report saved to /tmp/cc-agent/70328229/project/results/reports/experiment_report.md
+2026-08-28 05:16:31,990 - smart_solar_iot - INFO - ============================================================
+2026-08-28 05:16:31,990 - smart_solar_iot - INFO - PIPELINE COMPLETE in 28.2s
+2026-08-28 05:16:31,990 - smart_solar_iot - INFO - Results saved to: results/
+2026-08-28 05:16:31,990 - smart_solar_iot - INFO - ============================================================

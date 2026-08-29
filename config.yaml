@@ -1,0 +1,98 @@
+# ===========================================================================
+# Smart Solar IoT Monitoring System - Central Configuration
+# ===========================================================================
+# All simulation parameters are controlled from this file.
+# Modify values here rather than in source code.
+
+simulation:
+  duration_days: 1
+  sampling_interval_minutes: 5
+  random_seed: 42
+  start_date: "2024-06-15"  # Northern hemisphere summer solstice period
+  latitude: 7.3775   # Kumasi, Ghana
+  longitude: -3.9779
+  timezone: "UTC"
+  altitude_m: 300
+
+pv:
+  panel_area: 1.7          # m^2 (single 400W-class module)
+  nominal_power: 400        # W (STC rated)
+  nominal_voltage: 40.0     # V (Vmp at STC)
+  nominal_current: 10.0     # A (Imp at STC)
+  reference_irradiance: 1000  # W/m^2 (STC)
+  reference_temperature: 25.0  # °C (STC)
+  temperature_coefficient: -0.0035  # per °C (power derating)
+  voltage_temp_coefficient: -0.0030  # per °C
+  current_temp_coefficient: 0.0005   # per °C
+  dust_loss_initial: 0.0    # fraction
+  dust_loss_rate: 0.001    # fraction per day
+  shading_factor: 0.0      # fraction of panel shaded (0-1)
+  inverter_efficiency: 0.96
+
+sensors:
+  irradiance_noise: 15.0     # std W/m^2
+  temperature_noise: 0.5    # std °C
+  voltage_noise: 0.2         # std V
+  current_noise: 0.05       # std A
+  power_noise: 2.0           # std W
+  calibration_factor_irradiance: 1.0
+  calibration_factor_temperature: 1.0
+  calibration_factor_voltage: 1.0
+  calibration_factor_current: 1.0
+  failure_probability: 0.0  # probability per reading of sensor fault
+
+iot:
+  mqtt_broker: "localhost"
+  mqtt_port: 1883
+  publish_interval_seconds: 1.0
+  device_id: "ESP32_SOLAR_001"
+  use_simulated_broker: true   # true = local in-memory, no external broker
+  packet_loss_probability: 0.02
+  network_delay_ms_mean: 50.0
+  network_delay_ms_std: 20.0
+  reconnect_attempts: 5
+  reconnect_delay_seconds: 2.0
+
+database:
+  type: "sqlite"
+  path: "data/generated/solar_iot.db"
+
+machine_learning:
+  test_size: 0.2
+  validation_size: 0.2
+  random_state: 42
+  models:
+    - "linear_regression"
+    - "random_forest"
+    - "gradient_boosting"
+    - "xgboost"
+  classification_models:
+    - "random_forest"
+    - "gradient_boosting"
+    - "svm"
+
+experiments:
+  scenarios:
+    - "normal_clear_sky"
+    - "low_irradiance"
+    - "high_temperature"
+    - "cloud_variation"
+    - "dust_accumulation"
+    - "partial_shading"
+    - "sensor_failure"
+    - "communication_failure"
+    - "mixed_conditions"
+  repetitions: 5
+  traditional_sampling_interval_minutes: 60  # manual hourly readings
+
+visualization:
+  figure_format: "png"
+  dpi: 300
+  style: "seaborn-v0_8-whitegrid"
+  figsize: [10, 6]
+  palette: "muted"
+
+logging:
+  level: "INFO"
+  file: "results/logs/system.log"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
